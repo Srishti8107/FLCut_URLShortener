@@ -14,9 +14,15 @@
     <script src="script.js" defer></script>
         <div class="FLCut">FLCut</div>
         <div class="wrap">
-            <div><input type="text" id="long_url" placeholder="Enter your URL" class="longurl" contenteditable="true"></div>
+            <div><textarea type="text" id="long_url" placeholder="Enter your URL" class="longurl" contenteditable="true"></textarea></div>
             <div><button id="shortbtn" class="shortenbutton" type="button">Shorten URL</button></div>
-            <div><textarea id="short_url" placeholder="Shortened URL" class="shorturl" rows='3'></textarea></div>
+            <textarea id="short_url" placeholder="Shortened URL" class="shorturl" rows='3'></textarea>
+            <button class="copy" id="copybtn">
+                <ion-icon name="clipboard-outline"></ion-icon>
+                <span class="copy_label">Copy</span>
+            </button>
         </div>
+    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
