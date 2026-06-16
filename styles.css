@@ -1,20 +1,27 @@
-* {
-  margin: 0;
+html {
   padding: 0;
-  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-body{
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.hero, .dashboard{
     display: flex 1fr;
     margin: 0;
     padding: 0;
     align-items: center;
     justify-content: center;
     background: linear-gradient(to right, rgb(32, 3, 52), rgb(106, 19, 146));
+    background-size: cover;
+    height: 100vh;
+    background-position: top left;
 }
 
-.FLCut{
-    margin-top: 75px;
+.FLCut,.heading{
+    padding-top: 75px;
     color: rgb(241, 136, 26);
     font-family: "Lilita One", sans-serif;
     font-weight: 700;
@@ -49,7 +56,7 @@ body{
     color:white;
     text-align: center;
     field-sizing: content;
-    width: 355px;
+    width: 345px;
     min-height: 20px;
     height: fit-content;
     padding : 8px;
