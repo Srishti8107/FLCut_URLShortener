@@ -52,10 +52,15 @@ body{
     padding : 8px;
     overflow-wrap: break-word;
 }
+
 .longurl::placeholder,.shorturl::placeholder{
     color:white;
-    
 }
+
+.longurl:focus::placeholder,.shorturl:focus::placeholder{
+    color:transparent;
+}
+
 .shortenbutton{
     display: block;
     font-family: "Comic Neue", cursive;
@@ -67,4 +72,11 @@ body{
     margin-right: auto;
     margin-left: auto;
     border-radius: 18px;
+    border:1px solid black;
+    background-color: white;
+}
+.shortenbutton:hover{
+    cursor: pointer;
+    opacity: 60%;
+    transition: 5ms;
 }
