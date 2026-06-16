@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    display: flex 1fr;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, rgb(32, 3, 52), rgb(106, 19, 146));
+}
+
+.FLCut{
+    margin-top: 75px;
+    color: rgb(241, 136, 26);
+    font-family: "Lilita One", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.wrap {
+    margin: auto;
+    display: flex 1fr;
+    align-items:center;
+    justify-content:center;
+    margin-top: 35px;
+    height: fit-content;
+    max-width: 400px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 20px 15px;
+}
+
+.longurl,.shorturl {
+    font-family: "Comic Neue", cursive;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 18px;
+    border:1px solid rgb(255,255,255);
+    background: none;
+    color:white;
+    text-align: center;
+    field-sizing: content;
+    width: 368px;
+    min-height: 20px;
+    height: fit-content;
+    padding : 8px;
+    overflow-wrap: break-word;
+}
+.longurl::placeholder,.shorturl::placeholder{
+    color:white;
+    
+}
+.shortenbutton{
+    display: block;
+    font-family: "Comic Neue", cursive;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top :20px;
+    padding: 10px 30px;
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 18px;
+}
