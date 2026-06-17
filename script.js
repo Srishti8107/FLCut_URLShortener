@@ -1,4 +1,3 @@
-import {CONFIG} from './config.js';
 const shortbtn = document.getElementById("shortbtn");
 const shortUrl = document.getElementById("short_url");
 const msgContainer = document.getElementById("msgContainer");
