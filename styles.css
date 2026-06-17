@@ -138,18 +138,24 @@ body {
 }
 
 table {
+    table-layout: fixed;
     width: 100%;
-    max-width: 600px;
+    max-width: 900px;
     border-collapse: collapse;
     margin-top: 60px;
     height: fit-content;
-    overflow-y:break-word;
+    text-align: center;
 }
 
 table, th, td {
     color: white;
     padding: 10px;
     border: 2px solid rgba(135, 76, 152, 0.667);
+    overflow-wrap: break-word;
+}
+
+table a{
+    color: white;
 }
 
 .msgContainer {
@@ -182,3 +188,4 @@ table, th, td {
 @keyframes fadeOut {
   from { transform: translateX(0); opacity: 1; }
   to { transform: translateX(100%); opacity: 0; }
+}
