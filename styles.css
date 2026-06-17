@@ -1,12 +1,13 @@
 html {
-  padding: 0;
-  scroll-behavior: smooth;
+    padding: 0;
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
     padding: 0;
-}
+    font-family: "Comic Neue", cursive;
+    }
 
 .hero, .dashboard{
     display: flex 1fr;
@@ -16,7 +17,8 @@ body {
     justify-content: center;
     background: linear-gradient(to right, rgb(32, 3, 52), rgb(106, 19, 146));
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
+    height: fit-content;
     background-position: top left;
 }
 
@@ -43,7 +45,7 @@ body {
     padding: 20px auto;
 }
 
-.longurl,.shorturl {
+.longurl,.shorturl{
     margin-top: 20px;
     margin-left:20px;
     margin-right:20px;
@@ -63,27 +65,48 @@ body {
     overflow-wrap: break-word;
 }
 
-.longurl::placeholder,.shorturl::placeholder{
+.longurl::placeholder,.shorturl::placeholder, .alias::placeholder{
     color:white;
 }
 
-.longurl:focus::placeholder,.shorturl:focus::placeholder{
+.longurl:focus::placeholder,.shorturl:focus::placeholder,.alias:focus::placeholder{
     color:transparent;
 }
 
+.boxedview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.alias {
+    margin-top: 10px;
+    margin-right: 15px;
+    width: 150px;
+    height: 20px;
+    font-family: "Comic Neue", cursive;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 18px;
+    border:1px solid rgb(255,255,255);
+    background: none;
+    color:white;
+    text-align: center;
+    padding : 8px;
+    resize: none;
+    overflow: hidden;
+}
+
 .shortenbutton{
-    display: block;
+    margin-top: 10px;
     font-family: "Comic Neue", cursive;
     font-weight: bold;
     font-size: 16px;
-    margin-top :20px;
+    margin-left: 0px;
     padding: 10px 30px;
-    margin-right: auto;
-    margin-left: auto;
     border-radius: 5px;
     border:1px solid black;
     background-color: white;
-    margin-bottom: 0;
 }
 
 .shortenbutton:hover{
@@ -102,9 +125,29 @@ body {
     margin-right: 20px;
     margin-top: 5px;
     margin-bottom: 15px;
-    font-family: "Comic Neue", cursive;
     font-size: 15px;
     font-weight: bold;
     border-radius: 7px;
     border: none;
+}
+
+.tableHolder {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+    margin-top: 60px;
+    height: fit-content;
+    overflow-y:break-word;
+}
+
+table, th, td {
+    color: white;
+    padding: 10px;
+    border: 2px solid rgba(135, 76, 152, 0.667);
 }
