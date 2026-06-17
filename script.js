@@ -1,6 +1,12 @@
 import {CONFIG} from './config.js';
 const shortbtn = document.getElementById("shortbtn");
 const shortUrl = document.getElementById("short_url");
+const msgContainer = document.getElementById("msgContainer");
+
+// error message div creation
+const errmsg = document.createElement('div');
+errmsg.className = ("errmsg");
+
 let resultUrl;
 let linkData={};
 
@@ -37,11 +43,21 @@ async function createShortUrl(longUrl, customWord) {
             return resultUrl = await result.data.tiny_url;
             //console.log('Custom Short URL: ', result.data.tiny_url);
         }else {
-            console.error('Error from API: ', result.errors);
+            errmsg.innerText = result.errors;
+            msgContainer.appendChild(errmsg);
+            //console.error('Error from API: ', result.errors);
+            setTimeout(() => {
+                errmsg.remove();
+            }, 3000);
         }
 
     } catch (error) {
-        console.error('Network error:', error);
+        errmsg.innerText(error);
+        msgContainer.appendChild(toast);
+        setTimeout(() => {
+                errmsg.remove();
+            }, 3000);
+        //console.error('Network error:', error);
     }
 
 }
