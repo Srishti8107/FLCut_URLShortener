@@ -14,9 +14,9 @@ let links = JSON.parse(localStorage.getItem("shortlinks")) || [];
 displaylinks();
 
 async function createShortUrl(longUrl, customWord) {
-    const apiKey = `${CONFIG.apiKey}`;
+    const apiKey = "hC1xfhl6jXMYZ16yV7tRlgU850TSvx9DLEFBMKCmJshoK8i0pnYL9SVZBCGB";
     // console.log(apiKey);
-    const website = `${CONFIG.website}`;
+    const website = "https://api.tinyurl.com/create";
     
     const info = {
         url : longUrl,
